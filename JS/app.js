@@ -400,3 +400,34 @@ console.log("///////////////////////////////////////////////////////////////////
 // }
 console.log("/////////////////////////////////////////////////////////////////////////////////////")
 
+// const article = document.querySelector('article').style.backgroundColor="tomato"
+
+// for(let link of document.querySelectorAll('a')){
+//     link.href="https://kitm.lt"
+//   }
+//   for(let text of document.querySelectorAll('h4')){
+//     text.textContent="Labas Rytas";
+//   }
+//   document.querySelector('p').innerHTML = "<strong>Labai gerai</strong>";
+
+// const ul = document.createElement('ul');
+// const li = document.createElement('li');
+// li.textContent = "Labas rytas";
+// document.querySelector('section').appendChild(ul);
+// document.querySelector('ul').appendChild(li);
+
+console.log("/////////////////////////////////////////////////////////////////////////////////////")
+
+let table = document.createElement('table'), tr, td, row, cell;
+
+for(row = 0; row < 3; row++){
+    tr = document.createElement('tr');
+    for(cell = 0; cell < 10; cell++){
+        td = document.createElement('td');
+        td.textContent = `text ${+row +1}*${+cell +1}`;
+        tr.appendChild(td);
+
+    }
+    table.appendChild(tr);
+}
+document.querySelector('section').appendChild(table);
